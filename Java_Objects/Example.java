@@ -17,6 +17,11 @@ public class Example {
         if (!dispenser.isEmpty()) {
             System.out.println("Dispenser is full");
         }
-
+        while (dispenser.dispense()) {
+            System.out.println("Chomp!");
+        }
+        if (dispenser.isEmpty()) {
+            System.out.println("No PEZ left");
+        }
     }
 }
