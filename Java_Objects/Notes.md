@@ -22,4 +22,16 @@ adding complexity to objects before they are built is a common mistake programme
 
 **Exceptions**
 
-IllegalArgumentExceptions thrown are known as Runtime Error Handlers
+IllegalArgumentExceptions thrown are known as Runtime Error Handlers.
+
+**MVP** 
+
+Create a `minimum viable product`. the idea is to develope the minimum user storys before developing more tools. an MVP is defined by defining the minimum requirements to prove that the product is working as hypothesized.
+
+**Separation of Concerns**
+
+Code that modifies its own set of principles and is concerned with only the game logic would be the console prompting. this is a separation of concerns for the development process. the process was to separate the display of the game from the logic, or state of the game. because the concerns were separated, we will be able to use the same game logic in other applications, such as console applications, web apps and mobile apps
+
+![](img/separation.png)
+
+The Game class which will maintain the logic of the game. The Prompter class deals with the IO.
