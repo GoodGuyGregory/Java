@@ -22,4 +22,21 @@ class Game {
         return isHit;
     }
 
+    // Checks weather the letter is
+    public String getCurrentProgress() {
+        String progress = "";
+        for (char letter : answer.toCharArray()) {
+            char display = '-';
+            // if letter is found from the "hits" array
+            if (hits.indexOf(letter) != -1) {
+                // add the letter to the display
+                // at that letter location
+                display = letter;
+            }
+            progress += display;
+        }
+        // pass the display mesage to the prompter
+        return progress;
+    }
+
 }
