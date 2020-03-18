@@ -4,7 +4,7 @@ public class Hangman {
         Prompter prompter = new Prompter(game);
 
         // Shows the letters to the client
-        while (game.getRemainingTries() > 0) {
+        while (game.getRemainingTries() > 0 && !game.isWon()) {
 
             prompter.displayProgress();
             // Checks if the letter is in the word
@@ -17,6 +17,7 @@ public class Hangman {
             // Displays the progress for the user
             prompter.promptForGuess();
         }
+        prompter.displayOutcome();
     }// main
 }
 // class

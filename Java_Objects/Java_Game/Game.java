@@ -71,4 +71,12 @@ class Game {
         return progress;
     }
 
+    public boolean isWon() {
+        // uses method chaining
+        return getCurrentProgress().indexOf('-') == -1;
+    }
+
+    public String getAnswer() {
+        return this.answer;
+    }
 }
