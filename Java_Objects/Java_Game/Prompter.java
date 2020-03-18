@@ -36,7 +36,8 @@ class Prompter {
 
     public void displayOutcome() {
         if (game.isWon()) {
-            System.out.printf("You Won! Congratulations! with %d tries remaining %n", game.getRemainingTries());
+            System.out.printf("You Won! Congratulations! with %d tries remaining for the word %s %n",
+                    game.getRemainingTries(), game.getAnswer());
         } else {
             System.out.printf("So Close! but the answer is %s %n", game.getAnswer());
         }

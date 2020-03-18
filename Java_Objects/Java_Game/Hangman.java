@@ -1,6 +1,12 @@
 public class Hangman {
     public static void main(String[] args) {
-        Game game = new Game("treehouse");
+        if (args.length == 0) {
+            System.out.println("Usage: Java Hangman <answer>");
+            System.err.println("Answer is Required");
+            System.exit(1);
+        }
+
+        Game game = new Game(args[0]);
         Prompter prompter = new Prompter(game);
 
         // Shows the letters to the client
