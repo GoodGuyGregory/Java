@@ -35,3 +35,7 @@ Code that modifies its own set of principles and is concerned with only the game
 ![](img/separation.png)
 
 The Game class which will maintain the logic of the game. The Prompter class deals with the IO.
+
+**Story Notes** 
+
+Never stive to complete more than the story deserves, complete the task at hand then continue working through the next story after you have completed your work

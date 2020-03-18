@@ -12,13 +12,25 @@ class Prompter {
     // Method that Prompts for the guess
     public boolean promptForGuess() {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter a letter:  ");
-        String guessInput = input.nextLine();
-        char guess = guessInput.charAt(0);
-        return game.applyGuess(guess);
+        boolean isHit = false;
+        boolean isAcceptable = false;
+
+        do {
+            System.out.print("Enter a letter:  ");
+            String guessInput = input.nextLine();
+
+            try {
+                isHit = game.applyGuess(guessInput);
+                // Checks Validation
+                isAcceptable = true;
+            } catch (IllegalArgumentException iae) {
+                System.out.printf("%s Please try again. %n", iae.getMessage());
+            }
+        } while (!isAcceptable);
+        return isHit;
     }
 
     public void displayProgress() {
-        System.out.printf("Try to Solve: %s%n", game.getCurrentProgress());
+        System.out.printf("You have %d tries left to solve: %s%n", game.getRemainingTries(), game.getCurrentProgress());
     }
 }
