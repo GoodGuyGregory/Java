@@ -4,7 +4,7 @@
 
 REPEL for Java introduced in Java 9
 
-Opening Classes with Jshell is very easy use the `/open <classname>` make sure you are in the directory where your class exisits
+Opening Classes with Jshell is very easy use the `/open <classname>` make sure you are in the directory where your class exisits. and make sure that the class implementation is not `public class <desired class>`
 
 **Objects**
 
@@ -39,3 +39,7 @@ The Game class which will maintain the logic of the game. The Prompter class dea
 **Story Notes** 
 
 Never stive to complete more than the story deserves, complete the task at hand then continue working through the next story after you have completed your work
+
+**Command Line Arguments in Java**
+
+passing in additional arguments to java with the `String[] args` implementation
