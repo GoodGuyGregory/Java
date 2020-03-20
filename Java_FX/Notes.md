@@ -49,3 +49,25 @@ Stackes items ontop of eachother
 **GridPane**
 
 specifies cells for certain layouts
+
+**Markup Languages with Java**
+
+`FXML` - Elements in Strict XML require closing tags
+`fx:` is part of a namespace 
+
+**Styling your FX Applications**
+
+use CSS to Style your JavaFX Applications with ease. CSS provides an easy way to provide simple changes to applications. Children also inherit the parent's style in this paradigmn. it is easy for the application to be styled with CSS because of this behavior.
+
+There is a whole [reference](https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html) guide online to assist in styling Javafx applications.
+
+The following is a styled FXML GridPane. Notice that the nameing standard is `dash-case`
+
+```xml
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml"
+    style="-fx-font-family: Papyrus; -fx-alignment: center; -fx-hgap: 10; -fx-vgap: 10;" >
+```
+
+**Adding Additional Resources for your applications**
+
